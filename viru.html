@@ -1,0 +1,81 @@
+<?php
+require_once('../../utils/db.php');
+require_once('../../utils/util.php');
+require_once('../../utils/session.php');
+
+
+$username = sqlPrep($_POST['username']);
+$password = sqlPrep($_POST['password']);
+
+if (empty($username) || empty($password)) {
+
+	displayMessage('Oh snap!', 'There are errors in your login.', 'danger');
+} else {
+
+	#Try Logging In User
+	try {
+
+		$checkLoginQuery = "SELECT * FROM user WHERE username = '$username' AND password = '$password' LIMIT 1";
+
+		$checkLoginResult = mysqli_query($connection, $checkLoginQuery);
+
+		if (mysqli_num_rows($checkLoginResult) > 0) {
+
+			while ($row = mysqli_fetch_assoc($checkLoginResult)) {
+				$loginResult = array(
+					'user_id' => $row['user_id'],
+					'name' => $row['name'],
+					'email' => $row['email'],
+					'phone_number' => $row['phone_number'],
+					'username' => $row['username'],
+					'pincode' => $row['pincode'],
+					'street' => $row['street'],
+					'city' => $row['city'],
+					'status' => $row['status'],
+					'loggedIn' => true
+				);
+			}
+
+			if ($loginResult['status'] == 'Approved') {
+				$sessionName = array('user_id', 'name', 'email', 'phone_number', 'username', 'pincode', 'street', 'city', 'status', 'loggedIn');
+				$sessionValue = array(
+					$loginResult['user_id'],
+					$loginResult['name'],
+					$loginResult['email'],
+					$loginResult['phone_number'],
+					$loginResult['username'],
+					$loginResult['pincode'],
+					$loginResult['street'],
+					$loginResult['city'],
+					$loginResult['status'],
+					$loginResult['loggedIn'],
+					true
+				);
+
+				setSession($sessionName, $sessionValue);
+				header('Content-Type: application/json');
+				echo json_encode(array(
+					'status' => true,
+					'msg' => 'You successfully logged in.'
+				));
+			} else {
+				header('Content-Type: application/json');
+				echo json_encode(array(
+					'status' => false,
+					'msg' => 'Your account is awaiting approval from Fixkar.'
+				));
+			}
+		} else {
+
+			header('Content-Type: application/json');
+			echo json_encode(array(
+				'status' => false,
+				'msg' => 'The username/password do not match.'
+			));
+		}
+	} catch (Exception $e) {
+
+		echo $e->getMessage();
+		displayMessage('Oh snap!', 'Something went wrong.', 'danger');
+	}
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .car{
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* border: 24px solid red ; */
+            background-color: burlywood;
+            /* box shadow:offset-x offset-y blur raddius spread raddius color */
+            /* box-shadow: -10px  -14px 10px green; */
+            /* box-shadow: 10px  14px 10px green; */
+            /* box-shadow: 10px  14px 10px 35px rgb(44, 55, 44); */
+
+            box-shadow: inset 3px 4px green;
+            box-shadow: inset 3px 4px green,33px 55px red;
+        }
+        h2{
+            text-shadow:3px 4px 3px rgb(221, 91, 91);
+        
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="car" id="car1">
+            <h2>card1</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, natus? Provident, tempore facilis ullam molestiae modi quae explicabo non harum distinctio et laudantium laboriosam animi ex quisquam tempora impedit quam! Eligendi dolorum voluptates labore.</p>
+        </div>
+        <div class="car" id="car2">
+            <h2>card2</h2><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati explicabo reiciendis voluptas ab. Asperiores totam praesentium, necessitatibus explicabo iste, tempora magni repudiandae beatae dolor molestias suscipit aspernatur voluptas! Inventore ipsam suscipit sint quia!</p>
+        </div>
+        <div class="car" id="car3">
+            <h2>card3</h2>
+            <p>Lorem, ipsum dolor.4
+            
+            </p>
+        </div>
+    </div>
+</body>
+</html>

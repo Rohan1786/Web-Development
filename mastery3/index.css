@@ -1,0 +1,25 @@
+*
+{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+button{
+    margin: auto;
+    padding: auto;
+    border: none;
+    position: absolute;
+   transform:50% 50%;
+   cursor: pointer;
+   top: 50%;
+   left: 50%;
+   box-shadow: 0px 0px 10px;
+   transition: all 0.45s;
+
+    
+}
+button:hover{
+background-color: rgb(166, 255, 0);
+color: rgb(20, 181, 187);
+}

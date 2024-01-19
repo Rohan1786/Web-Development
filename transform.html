@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transformer properties</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+
+        }
+        .box{
+            /* display: flex; */
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            border: 2px solid brown;
+            background-color: rgb(117, 172, 221);
+            font-family: italic;
+            color: red;
+            text-align: center;
+            /* transform: rotate(44/deg);
+            transform: matrix3d(); */
+            transition: all 1s ease-in-out;
+        }
+        .container{
+            background-color:rgb(170, 170, 228) ;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .box:hover{
+            transform: rotate(360deg);
+            mask-repeat: repeat-x;
+            /* transform: skew(40deg); */
+            /* transform: translateX(122px,123px); */
+            /* transform: translateY(123px); */
+
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            this is funnny box
+        </div>
+    </div>
+</body>
+</html>

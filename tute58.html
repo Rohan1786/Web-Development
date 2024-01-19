@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrippting for time out and clear time</title>
+</head>
+<body>
+    <div class="container" >
+        this is function for the special Time
+    </div>
+    <span id="time">
+        Time now is
+    </span>
+    <script>
+        function greet(name,bytext){
+            console.log("hello guys my name is " +name +bytext);     
+    
+        }
+        // Timeout= setTimeout(greet,5000,"rohan","im very cool" );
+        // console.log(Timeout);
+        // clearTimeout(Timeout);
+        // console.log(Timeout);
+
+
+
+        intervalId = setInterval(greet,2000,"rohan","im very dengerous");
+        // console.log(intervalId)
+        clearInterval(intervalId);
+
+
+
+        function displayTime(){
+            time=new Date()
+
+            console.log(time);
+            document.getElementById('time').innerHTML=time;
+        }
+        setInterval(displayTime,3000)
+    </script>
+</body>
+</html>

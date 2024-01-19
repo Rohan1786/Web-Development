@@ -1,0 +1,3 @@
+component is the function which returns the jsx
+
+jsx is like html syntax but it is having powers 

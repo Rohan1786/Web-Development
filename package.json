@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "package": "^1.0.1",
+    "pug": "^3.0.2"
+  },
+  "name": "web-developer",
+  "version": "1.0.0",
+  "description": "this is the best website ever ",
+  "main": "java1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "roni"
+  ],
+  "author": "rohan",
+  "license": "ISC"
+}

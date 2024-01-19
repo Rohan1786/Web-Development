@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after selector</title><style>
+        body{
+            /* padding: 0px; */
+            /* margin: 0px; */
+            
+            /* background-color: black; */
+            color: rgb(235, 35, 35);
+            /* background-image: url(https://images.unsplash.com/photo-1665991947192-a63451f34c90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80); */
+            /* background:url('https://media.istockphoto.com/photos/virtual-reality-graphical-interface-with-computer-program-source-code-picture-id1411609512?s=2048x2048') no-repeat center center/cover; */
+            /* background: no-repeat; */
+            /* height: 100%; */
+            /* width: 100%; */
+            /* z-index: -1; */
+            /* opacity: 0.5; */
+        }
+        header::before{
+            /* background:url('https://media.istockphoto.com/photos/virtual-reality-graphical-interface-with-computer-program-source-code-picture-id1411609512?s=2048x2048') no-repeat center center/cover; */
+            /* background: no-repeat; */
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            height: 100%;
+
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        .navigation{
+            /* display: inline; */
+            display: flex;
+        }
+        section{
+            margin: 43px;
+            padding: 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid brown;
+            justify-content: center;
+            /* font-size: 4em; */
+        }
+        li{
+            list-style: none;
+            padding: 34px 24px;
+        }
+        section::before{
+            content: "this is the mainly used containe";
+            /* background-image: url(https://images.unsplash.com/photo-1665991947192-a63451f34c90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);  */
+            /* background: url(https://images.unsplash.com/photo-1665991947192-a63451f34c90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);  */
+            /* background: no-repeat; */
+            /* z-index: -1; */
+            /* opacity: 0.5; */
+            /* width: 100%; */
+            /* height: 100hv; */
+
+        }
+       .item{
+        display: inline;
+        /* cursor: cell; */
+        /* cursor: col-resize; */
+        cursor: grab;
+        font-size: italic;
+
+
+        }
+        h3{
+            font-size: 4em;
+        }
+       .boost { display: inline;
+        cursor: help;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul>
+            <li class="item">Home</li>
+            <li class="item">About</li>
+            <li class="boost">help</li>
+            <li class="item">serviceas</li>
+        </ul>
+    </nav>
+    <section>
+        <h3>welcome to rohan ka coding </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis commodi exercitationem, explicabo ad voluptatibus incidunt soluta temporibus. Culpa laborum quia atque vitae maiores ipsa fugit exercitationem dicta necessitatibus numquam. Labore facere deleniti aut!</p>
+    </section>
+<hr color="black"></header>
+
+    <!-- <hr color="black"> -->
+</body>
+</html>

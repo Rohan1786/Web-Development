@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible envirnment</title><style>
+.container{
+    height: 554px;
+    width: 100%;
+    border: 2px solid black;
+    /* inialize the container */
+    display: flex;
+   
+ /* properties of flex for container */
+    
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* by defaulte the flex direction row remain same */
+/* flex-direction: row; */
+flex-wrap: wrap;
+/* flex-wrap: wrap-reverse; */
+/* flex-flow: row reverse wrap; */
+
+/* justify-content: center; */
+/* justify-content: space-evenly; */
+/* justify-content: space-around; */
+/* justify-content: space-between; */
+align-items: center;
+/* align-items: flex-end; */
+align-items: stretch;
+flex-direction: row;
+
+}
+#item1{
+    /* higher the order lastly shown by vs code */
+    order 2;
+    /* flex grow can growing and alrging the property of   */
+    /* flex-grow: 2; */
+    /* flex-shrink: 2;flex direction set to rows then it widht when it 
+    is set coloumn its changes its height 
+    when  */
+    flex-basis: 320px;
+
+    
+
+}
+#item2{
+    order: 3;
+    flex-grow: 4;
+
+}#item3{
+    flex: 2 2 344px;
+    /* align-self: center; */
+
+}
+.item{
+    /* display: inline; */
+    width: 200px;
+    height: 200px;
+    background-color: rgb(224, 31, 17);
+    border: 2px solid rgb(0, 255, 42);
+    padding: 33px;
+    margin: 33px;
+
+    /* width: 200px; */
+}
+#item1 a:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+
+}
+    </style>
+</head>
+<body>
+    <h1>this is the flexible containing </h1>
+    <div class="container">
+       <div class="item" id="item1">first</div>
+       <div class="item" id="item2">second</div>
+       <div class="item" id="item3">third</div>
+       <div class="item" id="item4">fourth</div>
+    </div>
+    <!-- <input type="search" placeholder="search for the images"> -->
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in java scipt</title>
+    <style>
+        #btn{
+            padding: 10px 14px;
+            cursor: pointer;
+            background-color: blue;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- brwser event 
+        clik 
+        contect menu
+        mouse up/ down
+        mouse over/ out -->
+    <h1>this is the evetn from java</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum in aliquid corpo
+        ris quis nam excepturi minus
+         nesciunt eligendi, nisi, odit fuga maxime molestias i
+         ure molestiae iste totam culpa cum eos! Unde, aspernatur corrupti.</p>
+         <!-- <button id= 'btn' onclick="toggleHide">hide/show</button> -->
+    </div> 
+    <button id= 'btn' onclick="toggleHide()">hide/show</button>
+    <script>
+        let para=document.getElementById('para');
+        para.addEventListener('mouseover',function run(){
+            console.log('these inside the para')
+        });
+        para.addEventListener('mouseout',function run(){
+            console.log('these outside  the para')
+        });
+
+        function toggleHide(){
+            // let btn=document.getElementById('btn');
+            let btn=document.getElementById('para');
+            if(para.style.display!='none'){
+            para.style.display='none';    
+            }
+            else{
+            para.style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>

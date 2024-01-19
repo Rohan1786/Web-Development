@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframe and animation</title>
+    <style>
+        .container{
+           
+            background-color:yellow ;
+        }
+        .box{
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            /* animation-name: rony1; */
+            animation-name: prat;
+
+            animation-duration: 6s;
+            /* animation-iteration-count: infinite; */
+/* animation-fill-mode: alternate; */
+/* animation-timing-function: ease-in-out; */
+/* animation-delay: 3; */
+/* animation:name,delay,time,function,iteration count,duration */
+        }
+        @keyframes prat
+        {
+            0% {top: 0px;
+                left: 0px;
+                
+             }
+             25%{top: 250px;
+                left: 0px;
+
+             }
+             50%{ top:250px ;
+                left: 250px;
+
+             }
+            75% {
+                top: 250px;
+                left: 0px;
+
+            }
+            100%{
+                top: 0px;
+                left: 250px;
+
+            }
+
+             }
+            
+        
+        @keyframes rony1 {
+            from{
+                width:1300px;
+            }
+            to{
+                width:  1500px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>this is the box </h2>
+        </div>
+    </div>
+</body>
+</html>
